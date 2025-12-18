@@ -1,0 +1,1302 @@
+<html lang="ja"><head><script>(function(firebaseConfig, initialAuthToken, appId) {
+        window.__firebase_config = firebaseConfig;
+        window.__initial_auth_token = initialAuthToken;
+        window.__app_id = appId;
+            })("\n{\n  \"apiKey\": \"AIzaSyCqyCcs2R2e7AegGjvFAwG98wlamtbHvZY\",\n  \"authDomain\": \"bard-frontend.firebaseapp.com\",\n  \"projectId\": \"bard-frontend\",\n  \"storageBucket\": \"bard-frontend.firebasestorage.app\",\n  \"messagingSenderId\": \"175205271074\",\n  \"appId\": \"1:175205271074:web:2b7bd4d34d33bf38e6ec7b\"\n}\n","eyJhbGciOiJSUzI1NiIsImtpZCI6IjJkYmE3M2IxMjU1ZjVkYjU2ZDZhODNhYmE5YTA2Zjg5YzAwMDI1ZDciLCJ0eXAiOiJKV1QifQ.eyJzdWIiOiJmaXJlYmFzZS1hZG1pbnNkay1mYnN2Y0BiYXJkLWZyb250ZW5kLmlhbS5nc2VydmljZWFjY291bnQuY29tIiwiYXVkIjoiaHR0cHM6Ly9pZGVudGl0eXRvb2xraXQuZ29vZ2xlYXBpcy5jb20vZ29vZ2xlLmlkZW50aXR5LmlkZW50aXR5dG9vbGtpdC52MS5JZGVudGl0eVRvb2xraXQiLCJ1aWQiOiIwNzE1ODkwNzg2MDAyMzE4NTExOCIsImlzcyI6ImZpcmViYXNlLWFkbWluc2RrLWZic3ZjQGJhcmQtZnJvbnRlbmQuaWFtLmdzZXJ2aWNlYWNjb3VudC5jb20iLCJjbGFpbXMiOnsiYXBwSWQiOiJjXzYwMjM1NjU4OTlmYmMwNmJfdW1hX21lbW8uaHRtbC0yMyJ9LCJleHAiOjE3NjYwNTc0ODMsImlhdCI6MTc2NjA1Mzg4MywiYWxnIjoiUlMyNTYifQ.gytz9_VnaSI-ZBsAG5UKzYfi-lRMmzCs1VI1Wk2-pyQ9wJZ-7ERiLW5-cnLTAUSAyjvr2VuBftIVtGVn8kxHn7Rg5-d7_49VEg_gkFsMnTzuDdzJShDvanIjJtA8w-h_LK1SLpNtHQjuYzE2dEzQKmDrq-0Bkpg8VOZVyj2X_5fytXbXp_P--LnC-sa4XyngMtctjMwezX8d0zcK_BDusdO0yZjuagDXizJjakwodeBO_iM081rT--IpA9xGLR1D9LZ1IxQx6usd-cxHpkEWyPpqk3rOVVB7A4yYoQtan9-_R3GyJU4sDq26l60sduFJdDeMJuHh0VnPSOveYjyK4g","c_6023565899fbc06b_uma_memo.html-23")</script><script>'use strict';var h=typeof Object.defineProperties=="function"?Object.defineProperty:function(a,b,d){if(a==Array.prototype||a==Object.prototype)return a;a[b]=d.value;return a};function l(a){a=["object"==typeof globalThis&&globalThis,a,"object"==typeof window&&window,"object"==typeof self&&self,"object"==typeof global&&global];for(var b=0;b<a.length;++b){var d=a[b];if(d&&d.Math==Math)return d}throw Error("Cannot find global object");}var n=l(this);
+function p(a,b){if(b)a:{var d=n;a=a.split(".");for(var c=0;c<a.length-1;c++){var e=a[c];if(!(e in d))break a;d=d[e]}a=a[a.length-1];c=d[a];b=b(c);b!=c&&b!=null&&h(d,a,{configurable:!0,writable:!0,value:b})}}function r(a){function b(c){return a.next(c)}function d(c){return a.throw(c)}return new Promise(function(c,e){function f(g){g.done?c(g.value):Promise.resolve(g.value).then(b,d).then(f,e)}f(a.next())})}function t(a){return r(a())}
+p("Object.values",function(a){return a?a:function(b){var d=[],c;for(c in b)Object.prototype.hasOwnProperty.call(b,c)&&d.push(b[c]);return d}});p("Array.prototype.includes",function(a){return a?a:function(b,d){var c=this;c instanceof String&&(c=String(c));var e=c.length;d=d||0;for(d<0&&(d=Math.max(d+e,0));d<e;d++){var f=c[d];if(f===b||Object.is(f,b))return!0}return!1}});/*
+
+ MIT License
+
+ Copyright (c) 2017-2023 W.Y.
+
+ Permission is hereby granted, free of charge, to any person obtaining a copy
+ of this software and associated documentation files (the "Software"), to deal
+ in the Software without restriction, including without limitation the rights
+ to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+ copies of the Software, and to permit persons to whom the Software is
+ furnished to do so, subject to the following conditions:
+
+ The above copyright notice and this permission notice shall be included in
+ all copies or substantial portions of the Software.
+
+ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+ IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+ FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+ AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+ LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+ OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+ SOFTWARE.
+
+*/
+function u(a,b){const d=a.style;b.backgroundColor&&(d.backgroundColor=b.backgroundColor);b.width&&(d.width=`${b.width}px`);b.height&&(d.height=`${b.height}px`);const c=b.style;c!=null&&Object.keys(c).forEach(e=>{d[e]=c[e]})};var v=(()=>{let a=0;return()=>{a+=1;return`u${`0000${(Math.random()*1679616<<0).toString(36)}`.slice(-4)}${a}`}})();function w(a){const b=[];for(let d=0,c=a.length;d<c;d++)b.push(a[d]);return b}let x=null;function y(a={}){return x?x:a.l?x=a.l:x=w(window.getComputedStyle(document.documentElement))}function z(a,b){return(a=(a.ownerDocument.defaultView||window).getComputedStyle(a).getPropertyValue(b))?parseFloat(a.replace("px","")):0}
+function A(a,b={}){var d;if(!(d=b.width)){d=z(a,"border-left-width");var c=z(a,"border-right-width");d=a.clientWidth+d+c}(b=b.height)||(b=z(a,"border-top-width"),c=z(a,"border-bottom-width"),b=a.clientHeight+b+c);return{width:d,height:b}}function B(a){return new Promise((b,d)=>{const c=new Image;c.onload=()=>{c.decode().then(()=>{requestAnimationFrame(()=>b(c))})};c.onerror=d;c.crossOrigin="anonymous";c.decoding="async";c.src=a})}
+function C(a){return t(function*(){return Promise.resolve().then(()=>(new XMLSerializer).serializeToString(a)).then(encodeURIComponent).then(b=>`data:image/svg+xml;charset=utf-8,${b}`)})}
+function D(a,b,d){return t(function*(){const c=document.createElementNS("http://www.w3.org/2000/svg","svg"),e=document.createElementNS("http://www.w3.org/2000/svg","foreignObject");c.setAttribute("width",`${b}`);c.setAttribute("height",`${d}`);c.setAttribute("viewBox",`0 0 ${b} ${d}`);e.setAttribute("width","100%");e.setAttribute("height","100%");e.setAttribute("x","0");e.setAttribute("y","0");e.setAttribute("externalResourcesRequired","true");c.appendChild(e);e.appendChild(a);return C(c)})}
+var E=(a,b)=>{if(a instanceof b)return!0;a=Object.getPrototypeOf(a);return a===null?!1:a.constructor.name===b.name||E(a,b)};function F(a,b){return y(b).map(d=>{const c=a.getPropertyValue(d),e=a.getPropertyPriority(d);return`${d}: ${c}${e?" !important":""};`}).join(" ")}
+function G(a,b,d,c){a=window.getComputedStyle(a,d);var e=a.getPropertyValue("content");if(e!==""&&e!=="none"){var f=v();try{b.className=`${b.className} ${f}`}catch(k){return}e=document.createElement("style");var g=e.appendChild;d=`.${f}:${d}`;a.cssText?(c=a.getPropertyValue("content"),c=`${a.cssText} content: '${c.replace(/'|"/g,"")}';`):c=F(a,c);g.call(e,document.createTextNode(`${d}{${c}}`));b.appendChild(e)}};function H(a){return a.search(/^(data:)/)!==-1}function I(a,b,d){return t(function*(){const c=yield fetch(a,b);if(c.status===404)throw Error(`Resource "${c.url}" not found`);const e=yield c.blob();return new Promise((f,g)=>{const k=new FileReader;k.onerror=g;k.onloadend=()=>{try{f(d({o:c,result:k.result}))}catch(m){g(m)}};k.readAsDataURL(e)})})}const J={};function K(a,b,d){let c=a.replace(/\?.*/,"");d&&(c=a);/ttf|otf|eot|woff2?/i.test(c)&&(c=c.replace(/.*\//,""));return b?`[${b}]${c}`:c}
+function L(a,b,d){return t(function*(){const c=K(a,b,d.C);if(J[c]!=null)return J[c];d.u&&(a+=(/\?/.test(a)?"&":"?")+(new Date).getTime());let e;try{const f=yield I(a,d.i,({o:g,result:k})=>{b||(b=g.headers.get("Content-Type")||"");return k.split(/,/)[1]});e=`data:${b};base64,${f}`}catch(f){e=d.B||""}return J[c]=e})};const M={P:"application/font-woff",R:"application/font-woff",N:"application/font-truetype",v:"application/vnd.ms-fontobject",H:"image/png",F:"image/jpeg",D:"image/jpeg",A:"image/gif",M:"image/tiff",L:"image/svg+xml",O:"image/webp"};function N(a){return(a=/\.([^./]*?)$/g.exec(a))?a[1]:""};function O(a){return t(function*(){const b=a.toDataURL();return b==="data:,"?a.cloneNode(!1):B(b)})}function aa(a,b){return t(function*(){if(a.currentSrc){var d=document.createElement("canvas");const c=d.getContext("2d");d.width=a.clientWidth;d.height=a.clientHeight;c==null||c.drawImage(a,0,0,d.width,d.height);d=d.toDataURL();return B(d)}d=a.poster;d=yield L(d,M[N(d).toLowerCase()]||"",b);return B(d)})}
+function ba(a,b){return t(function*(){try{let d;if(a==null?0:(d=a.contentDocument)==null?0:d.body)return yield P(a.contentDocument.body,b,!0)}catch(d){}return a.cloneNode(!1)})}function ca(a,b){return t(function*(){return E(a,HTMLCanvasElement)?O(a):E(a,HTMLVideoElement)?aa(a,b):E(a,HTMLIFrameElement)?ba(a,b):a.cloneNode(a.tagName!=null&&a.tagName.toUpperCase()==="SVG")})}
+function da(a,b,d){return t(function*(){if(b.tagName!=null&&b.tagName.toUpperCase()==="SVG")return b;let c=[];if(a.tagName!=null&&a.tagName.toUpperCase()==="SLOT"&&a.assignedNodes)c=w(a.assignedNodes());else{let e;if(E(a,HTMLIFrameElement)&&((e=a.contentDocument)==null?0:e.body))c=w(a.contentDocument.body.childNodes);else{let f;c=w(((f=a.shadowRoot)!=null?f:a).childNodes)}}if(c.length===0||E(a,HTMLVideoElement))return b;yield c.reduce((e,f)=>e.then(()=>P(f,d)).then(g=>{g&&b.appendChild(g)}),Promise.resolve());
+return b})}function ea(a,b,d){const c=b.style;if(c){var e=window.getComputedStyle(a);e.cssText?(c.cssText=e.cssText,c.transformOrigin=e.transformOrigin):y(d).forEach(f=>{let g=e.getPropertyValue(f);f==="font-size"&&g.endsWith("px")&&(g=`${Math.floor(parseFloat(g.substring(0,g.length-2)))-.1}px`);E(a,HTMLIFrameElement)&&f==="display"&&g==="inline"&&(g="block");f==="d"&&b.getAttribute("d")&&(g=`path(${b.getAttribute("d")})`);c.setProperty(f,g,e.getPropertyPriority(f))})}}
+function fa(a,b){E(a,HTMLSelectElement)&&(b=Array.from(b.children).find(d=>a.value===d.getAttribute("value")))&&b.setAttribute("selected","")}
+function ha(a,b){return t(function*(){var d=a.querySelectorAll?a.querySelectorAll("use"):[];if(d.length===0)return a;var c={};for(var e=0;e<d.length;e++){var f=d[e].getAttribute("xlink:href");if(f){const g=document.querySelector(f);a.querySelector(f)||!g||c[f]||(c[f]=yield P(g,b,!0))}}d=Object.values(c);if(d.length){c=document.createElementNS("http://www.w3.org/1999/xhtml","svg");c.setAttribute("xmlns","http://www.w3.org/1999/xhtml");c.style.position="absolute";c.style.width="0";c.style.height="0";
+c.style.overflow="hidden";c.style.display="none";e=document.createElementNS("http://www.w3.org/1999/xhtml","defs");c.appendChild(e);for(f=0;f<d.length;f++)e.appendChild(d[f]);a.appendChild(c)}return a})}
+function P(a,b,d){return t(function*(){return d||!b.filter||b.filter(a)?Promise.resolve(a).then(c=>ca(c,b)).then(c=>da(a,c,b)).then(c=>{E(c,Element)&&(ea(a,c,b),G(a,c,":before",b),G(a,c,":after",b),E(a,HTMLTextAreaElement)&&(c.textContent=a.value),E(a,HTMLInputElement)&&c.setAttribute("value",a.value),fa(a,c));return c}).then(c=>ha(c,b)):null})};const Q=/url\((['"]?)([^'"]+?)\1\)/g,ia=/url\([^)]+\)\s*format\((["']?)([^"']+)\1\)/g,ja=/src:\s*(?:url\([^)]+\)\s*format\([^)]+\)[,;]\s*)+/g;function ka(a){const b=[];a.replace(Q,(d,c,e)=>{b.push(e);return d});return b.filter(d=>!H(d))}
+function la(a,b,d,c){return t(function*(){try{const e=d?(new URL(b,d||void 0)).toString():b;let f;f=yield L(e,M[N(b).toLowerCase()]||"",c);return a.replace(new RegExp(`(url\\(['"]?)(${b.replace(/([.*+?^${}()|\[\]\/\\])/g,"\\$1")})(['"]?\\))`,"g"),`$1${f}$3`)}catch(e){}return a})}function ma(a,{I:b}){return b?a.replace(ja,d=>{for(;;){const [c,,e]=ia.exec(d)||[],f=c,g=e;if(!g)return"";if(g===b)return`src: ${f};`}}):a}
+function R(a,b,d){return t(function*(){if(a.search(Q)===-1)return a;const c=ma(a,d);return ka(c).reduce((e,f)=>e.then(g=>la(g,f,b,d)),Promise.resolve(c))})};function S(a,b,d){return t(function*(){var c;const e=(c=b.style)==null?void 0:c.getPropertyValue(a);return e?(c=yield R(e,null,d),b.style.setProperty(a,c,b.style.getPropertyPriority(a)),!0):!1})}function na(a,b){return t(function*(){(yield S("background",a,b))||(yield S("background-image",a,b));(yield S("mask",a,b))||(yield S("-webkit-mask",a,b))||(yield S("mask-image",a,b))||(yield S("-webkit-mask-image",a,b))})}
+function oa(a,b){return t(function*(){const d=E(a,HTMLImageElement);if(d&&!H(a.src)||E(a,SVGImageElement)&&!H(a.href.baseVal)){var c=d?a.src:a.href.baseVal,e=yield L(c,M[N(c).toLowerCase()]||"",b);yield new Promise((f,g)=>{a.onload=f;a.onerror=b.m?(...k)=>{try{f(b.m(...k))}catch(m){g(m)}}:g;a.decode&&(a.decode=f);a.loading==="lazy"&&(a.loading="eager");d?(a.srcset="",a.src=e):a.href.baseVal=e})}})}
+function pa(a,b){return t(function*(){const d=w(a.childNodes).map(c=>T(c,b));yield Promise.all(d).then(()=>a)})}function T(a,b){return t(function*(){E(a,Element)&&(yield na(a,b),yield oa(a,b),yield pa(a,b))})};const U={};function V(a){return t(function*(){var b=U[a];if(b!=null)return b;b=yield(yield fetch(a)).text();b={url:a,cssText:b};return U[a]=b})}function W(a,b){return t(function*(){let d=a.cssText;const c=/url\(["']?([^"')]+)["']?\)/g,e=(d.match(/url\([^)]+\)/g)||[]).map(f=>t(function*(){let g=f.replace(c,"$1");g.startsWith("https://")||(g=(new URL(g,a.url)).href);return I(g,b.i,({result:k})=>{d=d.replace(f,`url(${k})`);return[f,k]})}));return Promise.all(e).then(()=>d)})}
+function X(a){if(a==null)return[];const b=[];a=a.replace(/(\/\*[\s\S]*?\*\/)/gi,"");for(var d=RegExp("((@.*?keyframes [\\s\\S]*?){([\\s\\S]*?}\\s*?)})","gi");;){var c=d.exec(a);if(c===null)break;b.push(c[0])}a=a.replace(d,"");d=/@import[\s\S]*?url\([^)]*\)[\s\S]*?;/gi;for(c=RegExp("((\\s*?(?:\\/\\*[\\s\\S]*?\\*\\/)?\\s*?@media[\\s\\S]*?){([\\s\\S]*?)}\\s*?})|(([\\s\\S]*?){([\\s\\S]*?)})","gi");;){let e=d.exec(a);if(e===null)if(e=c.exec(a),e===null)break;else d.lastIndex=c.lastIndex;else c.lastIndex=
+d.lastIndex;b.push(e[0])}return b}
+function qa(a,b){return t(function*(){const d=[],c=[];a.forEach(e=>{if("cssRules"in e)try{w(e.cssRules||[]).forEach((f,g)=>{if(f.type===CSSRule.IMPORT_RULE){let k=g+1;f=V(f.href).then(m=>W(m,b)).then(m=>X(m).forEach(q=>{try{e.insertRule(q,q.startsWith("@import")?k+=1:e.cssRules.length)}catch(Da){}})).catch(()=>{});c.push(f)}})}catch(f){const g=a.find(k=>k.href==null)||document.styleSheets[0];e.href!=null&&c.push(V(e.href).then(k=>W(k,b)).then(k=>X(k).forEach(m=>{g.insertRule(m,g.cssRules.length)})).catch(()=>
+{}))}});return Promise.all(c).then(()=>{a.forEach(e=>{if("cssRules"in e)try{w(e.cssRules||[]).forEach(f=>{d.push(f)})}catch(f){}});return d})})}function ra(a){return a.filter(b=>b.type===CSSRule.FONT_FACE_RULE).filter(b=>b.style.getPropertyValue("src").search(Q)!==-1)}function sa(a,b){return t(function*(){if(a.ownerDocument==null)throw Error("Provided element is not within a Document");var d=w(a.ownerDocument.styleSheets);d=yield qa(d,b);return ra(d)})}
+function ta(a){function b(c){(c.style.fontFamily||getComputedStyle(c).fontFamily).split(",").forEach(e=>{d.add(e.trim().replace(/["']/g,""))});Array.from(c.children).forEach(e=>{e instanceof HTMLElement&&b(e)})}const d=new Set;b(a);return d}function ua(a,b){return t(function*(){const d=yield sa(a,b),c=ta(a);return(yield Promise.all(d.filter(e=>c.has(e.style.fontFamily.trim().replace(/["']/g,""))).map(e=>R(e.cssText,e.parentStyleSheet?e.parentStyleSheet.href:null,b)))).join("\n")})}
+function va(a,b){return t(function*(){const d=b.j!=null?b.j:b.K?null:yield ua(a,b);if(d){const c=document.createElement("style");c.appendChild(document.createTextNode(d));a.firstChild?a.insertBefore(c,a.firstChild):a.appendChild(c)}})};function wa(a,b={}){return t(function*(){const {width:d,height:c}=A(a,b),e=yield P(a,b,!0);yield va(e,b);yield T(e,b);u(e,b);return yield D(e,d,c)})}
+function xa(a,b={}){return t(function*(){const {width:d,height:c}=A(a,b);var e=yield wa(a,b);e=yield B(e);const f=document.createElement("canvas"),g=f.getContext("2d"),k=b.G||window.devicePixelRatio||1,m=b.h||d,q=b.g||c;f.width=m*k;f.height=q*k;!b.J&&(f.width>16384||f.height>16384)&&(f.width>16384&&f.height>16384?f.width>f.height?(f.height*=16384/f.width,f.width=16384):(f.width*=16384/f.height,f.height=16384):f.width>16384?(f.height*=16384/f.width,f.width=16384):(f.width*=16384/f.height,f.height=
+16384));f.style.width=`${m}`;f.style.height=`${q}`;b.backgroundColor&&(g.fillStyle=b.backgroundColor,g.fillRect(0,0,f.width,f.height));g.drawImage(e,0,0,f.width,f.height);return f})}function ya(a,b={}){return t(function*(){return(yield xa(a,b)).toDataURL()})};const za=["gemini.google.com","corp.google.com","proxy.googlers.com"];function Y(){return document.body.querySelectorAll('[class*="animate"]').length>0}function Z(a){return t(function*(){try{return yield ya(a,{h:a.offsetWidth,g:a.offsetHeight})}catch(d){var b=a.offsetHeight;const c=document.createElement("canvas");c.width=a.offsetWidth;c.height=b;return c.toDataURL("image/png")}})}
+function Aa(){return t(function*(){const a=document.body.offsetWidth,b=document.body.offsetHeight,d=document.body.cloneNode(!0);d.querySelectorAll('[class*="animate"]').forEach(c=>{c.classList.remove(...Array.from(c.classList).filter(e=>e.startsWith("animate")))});d.style.width=`${a}px`;d.style.height=`${b}px`;return d})}
+function Ba(a){return t(function*(){let b=document.body;if(Y()){var d=yield Aa();b=d;document.body.appendChild(d)}d=yield Z(b);Y()&&document.body.removeChild(b);window.parent.postMessage({type:"SEND_SCREENSHOT",image:d,topOffset:document.documentElement.scrollTop},a.origin)})}function Ca(a){return t(function*(){const b={type:"SEND_SCREENSHOT_FOR_DATA_VISUALIZATION",image:yield Z(document.body),topOffset:0};window.parent.postMessage(b,a.origin)})}
+window.addEventListener("message",a=>t(function*(){if(za.some(d=>a.origin.includes(d))){var b=a.data;b&&(b.type==="MAKE_SCREENSHOT"&&(yield Ba(a)),b.type==="MAKE_SCREENSHOT_FOR_DATA_VISUALIZATION"&&(yield Ca(a)))}}));
+</script><script>(function() {
+  // Ensure this script is executed only once
+  if (window.firebaseAuthBridgeScriptLoaded) {
+    return;
+  }
+  window.firebaseAuthBridgeScriptLoaded = true;
+
+  let nextTokenPromiseId = 0;
+
+  // Stores { resolve, reject } for ongoing token requests
+  const pendingTokenPromises = {};
+
+  // Listen for messages from the Host Application
+  window.addEventListener('message', function(event) {
+
+    const messageData = event.data;
+
+  if (messageData && messageData.type === 'RESOLVE_NEW_FIREBASE_TOKEN') {
+      const { success, token, error, promiseId } = messageData ?? {};
+      if (pendingTokenPromises[promiseId]) {
+        if (success) {
+          pendingTokenPromises[promiseId].resolve(token);
+        } else {
+          pendingTokenPromises[promiseId].reject(new Error(error || 'Token refresh failed from host.'));
+        }
+        delete pendingTokenPromises[promiseId];
+      }
+    }
+  });
+
+  // Expose a function for the Generated App to request a new Firebase token
+  window.requestNewFirebaseToken = function() {
+    const currentPromiseId = nextTokenPromiseId++;
+    const promise = new Promise((resolve, reject) => {
+      pendingTokenPromises[currentPromiseId] = { resolve, reject };
+    });
+    if (window.parent && window.parent !== window) {
+      window.parent.postMessage({
+        type: 'REQUEST_NEW_FIREBASE_TOKEN',
+        promiseId: currentPromiseId
+      }, '*');
+    } else {
+      pendingTokenPromises[currentPromiseId].reject(new Error('No parent window to request token from.'));
+      delete pendingTokenPromises[currentPromiseId];
+    }
+    return promise;
+  };
+})();</script><script>
+let realOriginalGetUserMedia = null;
+if (navigator.mediaDevices && navigator.mediaDevices.getUserMedia) {
+  realOriginalGetUserMedia = navigator.mediaDevices.getUserMedia.bind(navigator.mediaDevices);
+}
+
+(function() {
+  if (navigator.mediaDevices && navigator.mediaDevices.__proto__) {
+    try {
+      Object.defineProperty(navigator.mediaDevices.__proto__, 'getUserMedia', {
+        get: function() {
+          return undefined; // Or throw an error
+        },
+        configurable: false
+      });
+    } catch (error) {
+      console.error("Error defining prototype getter:", error);
+    }
+  }
+})();
+
+(function() {
+  const pendingMediaResolvers = {};
+  let nextMediaPromiseId = 0;
+
+  function requestMediaPermissions(constraints) {
+    const mediaPromiseId = nextMediaPromiseId++;
+    const promise = new Promise((resolve, reject) => {
+      pendingMediaResolvers[mediaPromiseId] = (granted) => {
+        delete pendingMediaResolvers[mediaPromiseId];
+        resolve(granted);
+      };
+    });
+
+    window.parent.postMessage({
+      type: 'requestMediaPermission',
+      constraints: constraints,
+      promiseId: mediaPromiseId,
+    }, '*');
+
+    return promise;
+  }
+
+  let originalGetUserMedia = realOriginalGetUserMedia;
+
+  function interceptGetUserMedia() {
+    if (navigator.mediaDevices) {
+      Object.defineProperty(navigator.mediaDevices, 'getUserMedia', {
+        value: function(constraints) {
+          return requestMediaPermissions(constraints).then((granted) => {
+            if (granted) {
+              if (originalGetUserMedia) {
+                return originalGetUserMedia(constraints);
+              } else {
+                throw new Error("Original getUserMedia not available.");
+              }
+            } else {
+              throw new DOMException('Permission denied', 'NotAllowedError');
+            }
+          });
+        },
+        writable: false,
+        configurable: false
+      });
+    }
+  }
+
+  interceptGetUserMedia();
+
+  const observer = new MutationObserver(function(mutationsList, observer) {
+    for (const mutation of mutationsList) {
+      if (mutation.type === 'reconfigured' && mutation.name === 'getUserMedia' && mutation.object === navigator.mediaDevices) {
+        interceptGetUserMedia();
+      } else if (mutation.type === 'attributes' && mutation.attributeName === 'getUserMedia' && mutation.target === navigator.mediaDevices) {
+        interceptGetUserMedia();
+      } else if (mutation.type === 'childList' && mutation.addedNodes) {
+        mutation.addedNodes.forEach(node => {
+          if (node === navigator.mediaDevices) {
+            interceptGetUserMedia();
+          }
+        });
+      }
+    }
+  });
+
+  function interceptSpeechRecognition() {
+    if (!window.SpeechRecognition && !window.webkitSpeechRecognition) {
+      return;
+    }
+
+    const OriginalSpeechRecognition = window.SpeechRecognition || window.webkitSpeechRecognition;
+
+    const SpeechRecognitionWrapper = function(...args) {
+      const recognizer = new OriginalSpeechRecognition(...args);
+      const originalStart = recognizer.start.bind(recognizer);
+
+      recognizer.start = function() {
+        requestMediaPermissions({ audio: true }).then(granted => {
+          if (granted) {
+            originalStart();
+          } else {
+            const errorEvent = new SpeechRecognitionErrorEvent('error');
+            errorEvent.error = 'not-allowed'; // This is the standard error for permission denial.
+            recognizer.dispatchEvent(errorEvent);
+          }
+        });
+      };
+
+      return recognizer;
+    };
+
+    SpeechRecognitionWrapper.prototype = OriginalSpeechRecognition.prototype;
+    SpeechRecognitionWrapper.prototype.constructor = SpeechRecognitionWrapper;
+
+    if (window.SpeechRecognition) {
+      window.SpeechRecognition = SpeechRecognitionWrapper;
+    }
+    if (window.webkitSpeechRecognition) {
+      window.webkitSpeechRecognition = SpeechRecognitionWrapper;
+    }
+  }
+
+  interceptSpeechRecognition();
+
+  window.addEventListener('message', function(event) {
+    if (event.data) {
+      if (event.data.type === 'resolveMediaPermission') {
+        const { promiseId, granted } = event.data;
+        if (pendingMediaResolvers[promiseId]) {
+          pendingMediaResolvers[promiseId](granted);
+        }
+      }
+    }
+  });
+
+})();</script><script>((function(modelInformation) {
+  const originalFetch = window.fetch;
+  // TODO: b/421908508 - Move these out of the script and match all generative AI model calls.
+  let googleLlmBaseApiUrls = [
+    'https://generativelanguage.googleapis.com/v1beta/models/' + modelInformation.textModelName + ':streamGenerateContent',
+    'https://generativelanguage.googleapis.com/v1beta/models/' + modelInformation.textModelName + ':generateContent',
+    'https://generativelanguage.googleapis.com/v1beta/models/' + modelInformation.imageModelName + ':predict',
+    'https://generativelanguage.googleapis.com/v1beta/models/' + modelInformation.imageModelName + ':predictLongRunning',
+    'https://generativelanguage.googleapis.com/v1beta/models/' + modelInformation.imageEditModelName + ':generateContent',
+    'https://generativelanguage.googleapis.com/v1beta/models/' + modelInformation.imageTransformModelName + ':generateContent',
+    'https://generativelanguage.googleapis.com/v1beta/models/' + modelInformation.videoModelName + ':predict',
+    'https://generativelanguage.googleapis.com/v1beta/models/' + modelInformation.videoModelName + ':predictLongRunning',
+    'https://generativelanguage.googleapis.com/v1beta/models/' + modelInformation.ttsModelName + ':generateContent',
+  ];
+  modelInformation.deprecatedTextModelNames.forEach((modelName) => {
+    googleLlmBaseApiUrls.push(
+      'https://generativelanguage.googleapis.com/v1beta/models/' + modelName + ':streamGenerateContent',
+      'https://generativelanguage.googleapis.com/v1beta/models/' + modelName + ':generateContent',
+    );
+  });
+  modelInformation.deprecatedImageModelNames.forEach((modelName) => {
+    googleLlmBaseApiUrls.push(
+      'https://generativelanguage.googleapis.com/v1beta/models/' + modelName + ':predict',
+      'https://generativelanguage.googleapis.com/v1beta/models/' + modelName + ':predictLongRunning',
+    );
+  });
+
+  const pendingFetchResolvers = {};
+  let nextPromiseId = 0;
+
+  function handleStringInput(input, optionsArgument) {
+    const actualUrl = input;
+    const fetchCallArgs = [actualUrl, optionsArgument];
+    const effectiveOptions = optionsArgument || {};
+    const bodyForApiKeyCheck = effectiveOptions.body;
+    const bodyForPostMessage = effectiveOptions.body;
+    return { actualUrl, fetchCallArgs, effectiveOptions, bodyForApiKeyCheck, bodyForPostMessage };
+  }
+
+  function handleRequestInput(input, optionsArgument) {
+    const actualUrl = input.url;
+    const fetchCallArgs = [input, optionsArgument];
+    const effectiveOptions = { method: input.method, headers: new Headers(input.headers) };
+    let bodyForApiKeyCheck;
+    let bodyForPostMessage;
+
+    if (optionsArgument) {
+      if (optionsArgument.method) effectiveOptions.method = optionsArgument.method;
+      if (optionsArgument.headers) effectiveOptions.headers = new Headers(optionsArgument.headers);
+      if ('body' in optionsArgument) {
+        bodyForApiKeyCheck = optionsArgument.body;
+        bodyForPostMessage = optionsArgument.body;
+      } else {
+        bodyForApiKeyCheck = undefined;
+        bodyForPostMessage = input.body;
+      }
+    } else {
+      bodyForApiKeyCheck = undefined;
+      bodyForPostMessage = input.body;
+    }
+    return { actualUrl, fetchCallArgs, effectiveOptions, bodyForApiKeyCheck, bodyForPostMessage };
+  }
+
+  window.fetch = function(input, optionsArgument) {
+    let actualUrl;
+    let fetchCallArgs;
+    let effectiveOptions = {};
+    let bodyForApiKeyCheck;
+    let bodyForPostMessage;
+
+    if (typeof input === 'string') {
+      ({actualUrl, fetchCallArgs, effectiveOptions, bodyForApiKeyCheck, bodyForPostMessage} = handleStringInput(input, optionsArgument));
+    } else if (input instanceof Request) {
+      ({actualUrl, fetchCallArgs, effectiveOptions, bodyForApiKeyCheck, bodyForPostMessage} = handleRequestInput(input, optionsArgument));
+    } else {
+      return originalFetch.apply(window, [input, optionsArgument]);
+    }
+
+    effectiveOptions.method = effectiveOptions.method || 'GET';
+    if (!effectiveOptions.headers) {
+      effectiveOptions.headers = new Headers();
+    }
+
+
+    if (typeof actualUrl === 'string' && googleLlmBaseApiUrls.some((url) => actualUrl.startsWith(url))) {
+      let apiKeyIsNull = true;
+
+      const regex = new RegExp("models/([^:]+)");
+      const modelNameMatch = actualUrl.match(regex);
+      const modelName = modelNameMatch ? modelNameMatch[1] : 'unspecified';
+
+
+      try {
+        const urlObject = new URL(actualUrl);  // Use URL object for robust parsing
+        const apiKeyParam = urlObject.searchParams.get('key');
+        if (apiKeyParam) {
+          apiKeyIsNull = false;
+        }
+      } catch (e) {
+        // Continue checks even if URL parsing fails
+      }
+
+      if (apiKeyIsNull && effectiveOptions.headers) {
+        const h = new Headers(effectiveOptions.headers);
+        const apiKeyHeaderValue = h.get('X-API-Key') || h.get('x-api-key');
+        if (apiKeyHeaderValue) {
+          apiKeyIsNull = false;
+          return originalFetch.apply(window, fetchCallArgs);
+        }
+      }
+
+      if (apiKeyIsNull && effectiveOptions.method && ['POST', 'PUT', 'PATCH'].includes(effectiveOptions.method.toUpperCase()) && typeof bodyForApiKeyCheck === 'string') {
+        try {
+          const bodyData = JSON.parse(bodyForApiKeyCheck);
+          if (bodyData && bodyData.apiKey) {
+            apiKeyIsNull = false;
+            return originalFetch.apply(window, fetchCallArgs);
+          }
+        } catch (e) {
+          // Ignore JSON parsing errors
+        }
+      }
+
+      if(apiKeyIsNull) {
+        const promiseId = nextPromiseId++;
+        const promise = new Promise((resolve) => {
+          pendingFetchResolvers[promiseId] = (resolvedResponse) => {
+            delete pendingFetchResolvers[promiseId];
+            resolve(resolvedResponse);
+          };
+        });
+
+        let serializedBodyForPostMessage;
+        if (typeof bodyForPostMessage === 'string' || bodyForPostMessage == null) {
+            serializedBodyForPostMessage = bodyForPostMessage;
+        } else if (bodyForPostMessage instanceof ReadableStream) {
+            serializedBodyForPostMessage = null;
+        } else {
+            try {
+                serializedBodyForPostMessage = JSON.stringify(bodyForPostMessage);
+            } catch (e) {
+                serializedBodyForPostMessage = null;
+            }
+        }
+
+        const messageOptions = {
+            method: effectiveOptions.method,
+            headers: Object.fromEntries(new Headers(effectiveOptions.headers).entries()),
+            body: serializedBodyForPostMessage
+        };
+
+        window.parent.postMessage({
+          type: 'requestFetch',
+          url: actualUrl,
+          modelName: modelName,
+          options: messageOptions,
+          promiseId: promiseId,
+        }, '*');
+
+        return promise;
+      }
+      return originalFetch.apply(window, fetchCallArgs);
+    }
+    return originalFetch.apply(window, fetchCallArgs);
+  };
+
+  window.addEventListener('message', function(event) {
+    if (event.data && event.data.type === 'resolveFetch') {
+      const { promiseId, response } = event.data;
+      if (pendingFetchResolvers[promiseId]) {
+        try {
+          const reconstructedResponse = new Response(response.body, {
+            status: response.status,
+            statusText: response.statusText,
+            headers: new Headers(response.headers),
+          });
+          pendingFetchResolvers[promiseId](reconstructedResponse);
+        } catch (error) {
+          pendingFetchResolvers[promiseId](new Response(null, { status: 500, statusText: "Interceptor Response Reconstruction Error" }));
+        }
+      }
+    }
+  });
+
+}))({"textModelName":"gemini-2.5-flash-preview-09-2025","imageModelName":"imagen-4.0-generate-001","imageEditModelName":"gemini-2.5-flash-image-preview","imageTransformModelName":"gemini-3-pro-image-preview-11-2025","videoModelName":"veo-2.0-generate-001","ttsModelName":"gemini-2.5-flash-preview-tts","deprecatedTextModelNames":["gemini-2.0-flash","gemini-2.5-flash-preview-04-17","gemini-2.5-flash-preview-05-20"],"deprecatedImageModelNames":["imagen-3.0-generate-001","imagen-3.0-generate-002"]})</script><script>(function() {
+  const originalConsoleLog = console.log;
+  const originalConsoleError = console.error;
+
+    /**
+   * Normalizes an error event or a promise rejection reason into a structured error object.
+   * @param {*} errorEventOrReason The error object or reason.
+   * @return {object} Structured error data { message, name, stack }.
+   */
+  function getErrorObject(errorEventOrReason) {
+    if (errorEventOrReason instanceof Error) {
+      return {
+        message: errorEventOrReason.message,
+        name: errorEventOrReason.name,
+        stack: errorEventOrReason.stack,
+      };
+    }
+    // Fallback for non-Error objects.
+    try {
+      return {
+        message: JSON.stringify(errorEventOrReason),
+        name: 'UnknownErrorType',
+        stack: null,
+      };
+    } catch (e) {
+      return {
+        message: String(errorEventOrReason),
+        name: 'UnknownErrorTypeNonStringifiable',
+        stack: null,
+      };
+    }
+  }
+
+  /**
+   * Converts an array of arguments (from log/error) into a single string.
+   * Handles Error objects specially to include their message and stack.
+   * @param {Array<*>} args - Arguments passed to console methods.
+   * @return {string} A string representation of the arguments.
+   */
+  function stringifyArgs(args) {
+    return args
+      .map((arg) => {
+        if (arg instanceof Error) {
+          const {message, stack} = arg;
+          return `Error: ${message}${stack ? ('\nStack: ' + stack) : ''}`;
+        }
+        if (typeof arg === 'object' && arg !== null) {
+          try {
+            return JSON.stringify(arg);
+          } catch (error) {
+            return '[Circular Object]';
+          }
+        } else {
+          return String(arg);
+        }
+      })
+      .join(' ');
+  }
+
+  console.log = function(...args) {
+    const logString = stringifyArgs(args);
+    window.parent.postMessage({ type: 'log', message: logString }, '*');
+    originalConsoleLog.apply(console, args);
+  };
+
+  console.error = function(...args) {
+    let errorData;
+    if (args.length > 0 && args[0] instanceof Error) {
+      const err = args[0];
+      // If the first arg is an Error, capture its details.
+      errorData = {
+        type: 'error',
+        source: 'CONSOLE_ERROR',
+        ...getErrorObject(err),
+        rawArgsString: stringifyArgs(args.slice(1)),
+        timestamp: new Date().toISOString(),
+      };
+    } else {
+      // If not an Error object, treat all args as a general error message.
+      errorData = {
+        type: 'error',
+        source: 'CONSOLE_ERROR',
+        message: stringifyArgs(args),
+        name: 'ConsoleLoggedError',
+        stack: null,
+        timestamp: new Date().toISOString(),
+      };
+    }
+    window.parent.postMessage(errorData, '*');
+    originalConsoleError.apply(console, args);
+  };
+
+  // Listen for global unhandled synchronous errors.
+  window.addEventListener('error', function(event) {
+    const errorDetails = event.error ? getErrorObject(event.error) : {
+      message: event.message,
+      name: 'GlobalError',
+      stack: null,
+      filename: event.filename,
+      lineno: event.lineno,
+      colno: event.colno,
+    };
+
+    window.parent.postMessage({
+      type: 'error',
+      source: 'global',
+      ...errorDetails,
+      message: errorDetails.message || event.message,
+      timestamp: new Date().toISOString(),
+    }, '*');
+  });
+
+  // Listen for unhandled promise rejections (asynchronous errors).
+  window.addEventListener('unhandledrejection', function(event) {
+    const errorDetails = getErrorObject(event.reason);
+
+    window.parent.postMessage({
+      type: 'error',
+      source: 'unhandledrejection',
+      ...errorDetails,
+      message: errorDetails.message || 'Unhandled Promise Rejection',
+      timestamp: new Date().toISOString(),
+    }, '*');
+  });
+
+})();</script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover">
+    <title>UmaMemo</title>
+    <style>
+        :root {
+            /* Apple-inspired Palette - Slate & Salmon */
+            --slate-900: #0f172a;
+            --slate-800: #1e293b;
+            --slate-700: #334155;
+            --slate-500: #64748b;
+            --slate-400: #94a3b8;
+            --slate-200: #e2e8f0;
+            --slate-100: #f1f5f9;
+            --slate-50: #f8fafc;
+            
+            --accent: #FA8072; /* Salmon Pink */
+            --accent-light: #ffedea;
+            --mint: #6FB392;   /* Refined Modern Mint Green */
+            --white: #ffffff;
+            
+            /* High Visibility Icon Colors */
+            --mark-red: #ef4444;    /* ◎, ◯ */
+            --mark-dark: #334155;   /* ▲, △, ★, ✕ */
+            --mark-gray: #94a3b8;   /* 除 */
+            
+            --safe-area-bottom: env(safe-area-inset-bottom);
+        }
+
+        * {
+            box-sizing: border-box;
+            -webkit-tap-highlight-color: transparent;
+            font-family: -apple-system, BlinkMacSystemFont, "SF Pro Display", "Hiragino Kaku Gothic ProN", "Hiragino Sans", sans-serif;
+        }
+
+        html, body {
+            height: 100%;
+            margin: 0;
+            padding: 0;
+            background-color: var(--slate-50);
+            color: var(--slate-900);
+            overflow: hidden;
+            -webkit-font-smoothing: antialiased;
+        }
+
+        /* Layout Structure */
+        .app-shell {
+            display: flex;
+            flex-direction: column;
+            height: 100dvh;
+            max-width: 500px;
+            margin: 0 auto;
+            background: var(--slate-50);
+            position: relative;
+        }
+
+        header {
+            background: var(--slate-800);
+            color: var(--white);
+            padding: 14px 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-shrink: 0;
+            z-index: 100;
+        }
+
+        header h1 {
+            margin: 0;
+            font-size: 0.9rem;
+            font-weight: 500;
+            letter-spacing: 0.2em;
+            text-transform: uppercase;
+            cursor: default;
+            user-select: none;
+        }
+
+        /* Top Summary Area */
+        .top-summary {
+            padding: 8px 20px;
+            background: var(--white);
+            border-bottom: 1px solid var(--slate-100);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            font-size: 0.75rem;
+            font-weight: 700;
+            color: var(--slate-500);
+            margin-bottom: 8px;
+        }
+        .profit-plus { color: var(--mark-red); }
+        .profit-minus { color: var(--slate-700); }
+
+        .btn-ghost {
+            background: var(--slate-50);
+            border: 1.5px solid var(--slate-100);
+            color: var(--slate-700);
+            padding: 8px 16px;
+            border-radius: 999px;
+            font-size: 0.8rem;
+            font-weight: 700;
+            transition: 0.2s;
+        }
+        .btn-ghost.active {
+            background: var(--accent-light);
+            border-color: var(--accent);
+            color: var(--accent);
+        }
+
+        main {
+            flex: 1;
+            overflow-y: auto;
+            padding-bottom: 32px;
+        }
+
+        /* List View */
+        .memo-list { padding: 8px 12px 12px; }
+        .memo-card {
+            background: var(--white);
+            border-radius: 18px;
+            padding: 20px;
+            margin-bottom: 12px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
+            transition: transform 0.2s;
+            user-select: none;
+            touch-action: pan-y;
+        }
+        .memo-card:active { transform: scale(0.98); }
+        .memo-body { flex: 1; }
+        .memo-title { font-size: 1.05rem; font-weight: 700; color: var(--slate-800); margin-bottom: 6px; }
+        .memo-meta { display: flex; align-items: center; gap: 8px; }
+        .tag { background: var(--slate-100); color: var(--slate-700); padding: 3px 10px; border-radius: 6px; font-size: 0.75rem; font-weight: 700; }
+        .tag-accent { background: var(--accent-light); color: var(--accent); }
+
+        .action-group { display: flex; align-items: center; gap: 8px; margin-left: 12px; }
+
+        .memo-action-btn {
+            width: 44px; height: 44px;
+            display: flex; align-items: center; justify-content: center;
+            border-radius: 12px;
+            background: var(--slate-50);
+            border: 1px solid var(--slate-100);
+            color: var(--mint);
+        }
+        .memo-action-btn.result-btn { 
+            color: var(--slate-400); 
+            background: var(--white);
+            border-color: var(--slate-100);
+        }
+        .memo-action-btn.result-btn.hit { color: var(--accent); background: var(--accent-light); border-color: var(--accent-light); }
+        .memo-action-btn.result-btn.miss { color: var(--slate-500); background: var(--slate-100); }
+
+        /* Config Bar */
+        .config-bar { display: flex; gap: 8px; padding: 10px 16px; background: var(--white); border-bottom: 1px solid var(--slate-100); }
+        .select-modern { 
+            flex: 1; padding: 10px; border: 1.5px solid var(--slate-100); border-radius: 12px; 
+            background: var(--slate-50); font-size: 0.85rem; font-weight: 600; color: var(--slate-800); 
+            outline: none; appearance: none;
+        }
+        .select-modern:disabled { opacity: 0.5; background: var(--slate-100); cursor: not-allowed; }
+
+        .phase-tabs { display: flex; padding: 0 16px; background: var(--white); gap: 20px; }
+        .tab-item { padding: 14px 0; font-size: 0.85rem; font-weight: 700; color: var(--slate-500); border-bottom: 2px solid transparent; transition: 0.3s; }
+        .tab-item.active { color: var(--accent); border-bottom-color: var(--accent); }
+
+        /* Stepper */
+        .stepper { display: flex; align-items: center; background: var(--slate-100); border-radius: 10px; height: 36px; padding: 2px; }
+        .stepper-btn { width: 34px; height: 100%; border: none; background: none; font-size: 1.2rem; color: var(--slate-700); cursor: pointer; }
+        .stepper-val { min-width: 40px; text-align: center; font-weight: 700; font-size: 0.9rem; cursor: pointer; padding: 0 4px; }
+
+        /* Grids */
+        .grid-6 { display: grid; grid-template-columns: repeat(6, 1fr); gap: 8px; padding: 0 16px 16px; }
+        .grid-compact { display: grid; grid-template-columns: repeat(9, 1fr); gap: 4px; }
+
+        .btn-horse {
+            aspect-ratio: 1; border: 1px solid var(--slate-100); border-radius: 14px; background: var(--white);
+            font-size: 1.15rem; font-weight: 800; position: relative; color: var(--slate-700);
+            box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05); display: flex; align-items: center; justify-content: center; cursor: pointer;
+        }
+        .btn-horse span { pointer-events: none; }
+        .btn-horse.selected { border: 2.5px solid var(--accent); background: var(--accent-light); color: var(--accent); }
+        .btn-horse.excluded { opacity: 0.35; background: var(--slate-100); border-style: dashed; }
+        .btn-horse .badge {
+            position: absolute; top: -6px; right: -6px; width: 24px; height: 24px; background: var(--white);
+            border-radius: 50%; display: flex; align-items: center; justify-content: center;
+            border: 1.5px solid var(--slate-100); pointer-events: none; padding: 3px;
+        }
+
+        .btn-bet-horse {
+            aspect-ratio: 1; border-radius: 8px; font-size: 0.95rem; font-weight: 700;
+            border: 1px solid var(--slate-100); background: var(--white);
+            display: flex; align-items: center; justify-content: center; position: relative;
+        }
+        .btn-bet-horse.selected { border: 2px solid var(--accent); background: var(--accent-light); color: var(--accent); }
+        .btn-bet-horse:disabled { opacity: 0.2; border-style: dotted; cursor: not-allowed; }
+
+        /* Marks row */
+        .marks-row { display: flex; justify-content: space-between; padding: 0 16px 20px; gap: 8px; }
+        .btn-m {
+            flex: 1; height: 48px; border-radius: 14px; border: 2px solid transparent; background: var(--white);
+            box-shadow: 0 2px 8px rgba(0,0,0,0.06); display: flex; align-items: center; justify-content: center;
+            cursor: pointer; transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1); padding: 8px;
+        }
+        .btn-m.active { background: var(--slate-100); border-color: var(--slate-200); box-shadow: inset 0 2px 4px rgba(0,0,0,0.05); }
+
+        /* Evaluation List */
+        .list-group { padding: 0 16px; }
+        .list-row { display: flex; align-items: center; padding: 14px; background: var(--white); border-radius: 14px; margin-bottom: 8px; box-shadow: 0 1px 3px rgba(0,0,0,0.02); }
+        .list-row.excluded { opacity: 0.5; }
+        .row-mark-icon { width: 32px; height: 32px; margin-right: 12px; display: flex; align-items: center; justify-content: center; }
+        .row-num { width: 32px; height: 32px; background: var(--slate-800); color: var(--white); border-radius: 8px; display: flex; align-items: center; justify-content: center; font-weight: 800; margin-right: 12px; }
+
+        .btn-delete-text {
+            background: none; border: none;
+            color: var(--slate-400); font-size: 0.8rem; font-weight: 700;
+            padding: 4px; margin-left: auto;
+        }
+
+        /* Betting Section */
+        .bet-card { background: var(--white); border-radius: 16px; margin: 0 16px 12px; padding: 16px; border: 1px solid var(--slate-100); }
+        .bet-head { display: flex; justify-content: space-between; align-items: center; margin-bottom: 12px; }
+        .bet-head-info { display: flex; align-items: center; gap: 8px; font-size: 0.95rem; font-weight: 800; color: var(--slate-800); }
+        .bet-body { font-size: 1.2rem; font-weight: 800; color: var(--slate-800); letter-spacing: 0.05em; line-height: 1.4; }
+        .summary-banner { background: var(--slate-800); color: var(--white); padding: 18px 20px; margin: 12px 16px; border-radius: 16px; display: flex; justify-content: space-between; align-items: baseline; }
+
+        /* Footer */
+        footer { background: var(--white); padding: 16px 16px calc(16px + var(--safe-area-bottom)); display: flex; gap: 12px; border-top: 1px solid var(--slate-100); }
+        .btn-primary { 
+            flex: 2; background: var(--accent); color: var(--white); 
+            border: none; padding: 16px; border-radius: 14px; 
+            font-weight: 800; font-size: 1rem; 
+            box-shadow: 0 4px 12px rgba(250, 128, 114, 0.3); 
+            cursor: pointer;
+            display: flex; align-items: center; justify-content: center; gap: 8px;
+        }
+        .btn-primary.mint { background: var(--mint); box-shadow: 0 4px 12px rgba(111, 179, 146, 0.3); }
+        .btn-secondary { flex: 1; background: var(--white); border: 1.5px solid var(--slate-100); color: var(--slate-800); padding: 16px; border-radius: 14px; font-weight: 700; cursor: pointer; }
+
+        /* Empty State */
+        .empty-state { display: flex; flex-direction: column; align-items: center; justify-content: center; padding: 80px 40px; color: var(--slate-400); text-align: center; }
+        .empty-state-icon { margin-bottom: 16px; opacity: 0.5; }
+        .empty-state-text { font-size: 0.9rem; font-weight: 600; letter-spacing: 0.02em; }
+
+        /* Modals */
+        .modal-base { display: none; position: fixed; inset: 0; z-index: 1000; padding: 24px; overflow-y: auto; }
+        #ticket-modal { background: var(--slate-900); color: var(--white); padding-bottom: 120px; }
+        #result-modal { background: var(--white); color: var(--slate-900); padding-bottom: 60px; }
+
+        .modal-title { font-size: 1.6rem; font-weight: 900; border-bottom: 4px solid var(--slate-700); margin-bottom: 24px; padding-bottom: 12px; }
+        
+        .modal-bet-group { margin-bottom: 40px; }
+        .modal-bet-type { font-size: 1rem; font-weight: 700; color: var(--slate-400); margin-bottom: 8px; text-transform: uppercase; }
+        .modal-bet-nums { font-size: 2.2rem; font-weight: 900; line-height: 1.15; word-break: break-all; color: var(--white); letter-spacing: 0.05em; }
+
+        .modal-legend { background: rgba(255,255,255,0.05); padding: 16px; border-radius: 16px; margin-bottom: 32px; display: flex; flex-wrap: wrap; gap: 12px; border: 1px solid rgba(255,255,255,0.1); }
+        .legend-item { display: flex; align-items: center; gap: 6px; font-size: 1.1rem; font-weight: 800; color: #fff; }
+        .legend-icon { width: 20px; height: 20px; }
+
+        .modal-footer { position: fixed; bottom: 30px; left: 0; width: 100%; display: flex; justify-content: center; pointer-events: none; z-index: 1001; }
+        .btn-modal-close { pointer-events: auto; background: var(--slate-800); color: var(--white); border: none; padding: 14px 48px; border-radius: 999px; font-weight: 800; font-size: 1rem; box-shadow: 0 10px 25px rgba(0,0,0,0.2); }
+        #ticket-modal .btn-modal-close { background: var(--white); color: var(--slate-900); box-shadow: 0 10px 25px rgba(0,0,0,0.5); }
+
+        /* FAB */
+        .fab-container { position: fixed; bottom: 30px; right: 24px; display: flex; flex-direction: column; gap: 12px; }
+        .fab { width: 60px; height: 60px; border-radius: 50%; background: var(--accent); color: var(--white); border: none; display: flex; align-items: center; justify-content: center; box-shadow: 0 8px 16px rgba(0,0,0,0.15); cursor: pointer; }
+
+        #toast { position: fixed; top: 100px; left: 50%; transform: translateX(-50%); background: rgba(15, 23, 42, 0.9); color: var(--white); padding: 10px 24px; border-radius: 99px; font-size: 0.85rem; font-weight: 600; z-index: 2000; display: none; backdrop-filter: blur(8px); }
+        .section-label { font-size: 0.7rem; font-weight: 800; color: var(--slate-500); padding: 16px 16px 8px; text-transform: uppercase; letter-spacing: 0.05em; display: flex; justify-content: space-between; }
+
+        .hidden { display: none !important; }
+        .icon-svg { width: 100%; height: 100%; fill: none; stroke-linecap: round; stroke-linejoin: round; }
+        .result-mark { font-size: 1.1rem; font-weight: 900; }
+    </style>
+</head>
+<body>
+
+<div id="toast"></div>
+
+<div class="app-shell">
+    
+    <!-- LIST VIEW -->
+    <div id="view-list" class="app-shell" style="position: absolute; inset:0;">
+        <header>
+            <h1 id="app-title-main">UmaMemo</h1>
+        </header>
+        <div class="top-summary" id="top-summary-bar">
+            <span>0勝 0敗</span>
+            <span>収支: <span class="profit-plus">+0円</span></span>
+        </div>
+        <main id="memo-container"><div class="empty-state"><div class="empty-state-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M14.5 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7.5L14.5 2z"></path><polyline points="14 2 14 8 20 8"></polyline></svg></div><div class="empty-state-text">登録されたレースがありません</div></div></main>
+        <div id="delete-all-container" style="text-align: center; padding: 20px 0; margin-bottom: 40px;" class="hidden">
+            <button class="btn-delete-text" style="margin-left: 0;" onclick="deleteAllMemos()">登録したレースをすべて削除する</button>
+        </div>
+        <div class="fab-container">
+            <button class="fab" onclick="createNewMemo()" style="font-size: 1.8rem;">＋</button>
+        </div>
+    </div>
+
+    <!-- EDIT VIEW -->
+    <div id="view-edit" class="hidden app-shell" style="position: absolute; inset:0;">
+        <header>
+            <button class="btn-ghost" style="padding: 6px 14px;" onclick="exitEdit()">◀ 一覧</button>
+            <h1 id="app-title-edit">UmaMemo</h1>
+            <button class="btn-delete-text" style="color: rgba(255,255,255,0.6); margin-left: 0;" onclick="deleteMemo()">削除</button>
+        </header>
+
+        <div class="config-bar">
+            <select id="select-type" class="select-modern" onchange="onTypeChange(this.value)">
+                <option value="chuo">中央競馬</option>
+                <option value="chiho">地方競馬</option>
+            </select>
+            <select id="select-venue" class="select-modern" onchange="onVenueChange(this.value)"></select>
+            <select id="select-race" class="select-modern" onchange="onRaceChange(this.value)"></select>
+        </div>
+
+        <div class="phase-tabs">
+            <div id="tab-eval" class="tab-item active" onclick="setPhase('eval')">My評価</div>
+            <div id="tab-bet" class="tab-item" onclick="setPhase('bet')">買い目作成</div>
+        </div>
+
+        <main>
+            <div id="phase-eval">
+                <div class="section-label">
+                    <span>馬番号と評価</span>
+                    <div class="stepper">
+                        <button class="stepper-btn" onclick="adjustLimit(-1)">−</button>
+                        <div class="stepper-val" id="limit-display" onclick="promptLimit()">18</div>
+                        <button class="stepper-btn" onclick="adjustLimit(1)">＋</button>
+                    </div>
+                </div>
+                <div class="grid-6" id="eval-pad"></div>
+                <div class="marks-row" id="eval-mark-row">
+                    <button class="btn-m" data-mark="◎" onclick="applyMark('◎')"><span style="width:30px; height:30px" id="sel-◎"><svg class="icon-svg" viewBox="0 0 24 24" style="stroke:var(--mark-red);" xmlns="http://www.w3.org/2000/svg"><circle cx="12" cy="12" r="10" stroke-width="3"></circle><circle cx="12" cy="12" r="5" stroke-width="3"></circle></svg></span></button>
+                    <button class="btn-m" data-mark="◯" onclick="applyMark('◯')"><span style="width:30px; height:30px" id="sel-◯"><svg class="icon-svg" viewBox="0 0 24 24" style="stroke:var(--mark-red);" xmlns="http://www.w3.org/2000/svg"><circle cx="12" cy="12" r="10" stroke-width="3"></circle></svg></span></button>
+                    <button class="btn-m" data-mark="▲" onclick="applyMark('▲')"><span style="width:30px; height:30px" id="sel-▲"><svg class="icon-svg" viewBox="0 0 24 24" style="stroke:var(--mark-dark);" xmlns="http://www.w3.org/2000/svg"><path d="M12 2L22 21H2L12 2Z" style="fill:var(--mark-dark); stroke:none;"></path></svg></span></button>
+                    <button class="btn-m" data-mark="△" onclick="applyMark('△')"><span style="width:30px; height:30px" id="sel-△"><svg class="icon-svg" viewBox="0 0 24 24" style="stroke:var(--mark-dark);" xmlns="http://www.w3.org/2000/svg"><path d="M12 4L21 20H3L12 4Z" stroke-width="2.5" stroke-dasharray="2 1"></path></svg></span></button>
+                    <button class="btn-m" data-mark="★" onclick="applyMark('★')"><span style="width:30px; height:30px" id="sel-★"><svg class="icon-svg" viewBox="0 0 24 24" style="stroke:var(--mark-dark);" xmlns="http://www.w3.org/2000/svg"><path d="M12 2L15 9H22L16 14L18 21L12 17L6 21L8 14L2 9H9L12 2Z" stroke-width="2.5"></path></svg></span></button>
+                    <button class="btn-m" data-mark="✕" onclick="applyMark('✕')"><span style="width:30px; height:30px" id="sel-✕"><svg class="icon-svg" viewBox="0 0 24 24" style="stroke:var(--mark-dark);" xmlns="http://www.w3.org/2000/svg"><path d="M18 6L6 18M6 6L18 18" stroke-width="3.5"></path></svg></span></button>
+                    <button class="btn-m" data-mark="除" onclick="applyMark('除')"><span style="width:30px; height:30px" id="sel-除"><svg class="icon-svg" viewBox="0 0 24 24" style="stroke:var(--mark-gray);" xmlns="http://www.w3.org/2000/svg"><circle cx="12" cy="12" r="10" stroke-width="2.5"></circle><path d="M4.93 4.93L19.07 19.07" stroke-width="2.5"></path></svg></span></button>
+                </div>
+                <div class="section-label">
+                    <span>登録済み</span>
+                    <button class="btn-delete-text" style="margin-left: 0;" onclick="resetEvaluation()">リセット</button>
+                </div>
+                <div id="eval-list" class="list-group"></div>
+            </div>
+
+            <div id="phase-bet" class="hidden">
+                <div id="bet-list-container" style="padding-top: 10px;"></div>
+                <div class="summary-banner">
+                    <span>合計購入点数</span>
+                    <span id="total-count-display">0 点</span>
+                </div>
+                <div class="section-label">新しい買い目を追加</div>
+                <div style="padding: 0 16px;">
+                    <select id="bet-type" class="select-modern" style="width:100%; margin-bottom:16px; height: 50px; background: var(--white); border: 1.5px solid var(--slate-200); box-shadow: 0 2px 4px rgba(0,0,0,0.02);" onchange="renderBetForm()">
+                        <option value="単勝">単勝</option>
+                        <option value="複勝">複勝</option>
+                        <option value="馬連">馬連</option>
+                        <option value="馬単">馬単</option>
+                        <option value="ワイド">ワイド</option>
+                        <option value="三連複">三連複</option>
+                        <option value="三連単">三連単</option>
+                    </select>
+                    <div id="method-container" style="display:flex; gap:8px; margin-bottom:16px; overflow-x: auto; padding-bottom: 4px;"></div>
+                    <div id="selection-container" style="background:var(--white); border: 1px solid var(--slate-100); border-radius:20px; padding:12px;"></div>
+                    <div style="text-align:right; font-weight:900; color:var(--accent); padding:16px 0; font-size: 1.4rem;" id="preview-count">0 点</div>
+                    <button class="btn-primary" style="width:100%" onclick="addBet()">買い目に追加</button>
+                </div>
+            </div>
+        </main>
+
+        <footer>
+            <button class="btn-secondary" onclick="exitEdit()">終了</button>
+            <button id="footer-main-btn" class="btn-primary mint" onclick="setPhase('bet')">
+                <span>買い目作成 ➔</span>
+            </button>
+        </footer>
+    </div>
+
+    <!-- TICKET MODAL -->
+    <div id="ticket-modal" class="modal-base">
+        <div class="modal-title" id="modal-header-title">TOKYO 11R</div>
+        <div id="modal-legend-area" class="modal-legend"></div>
+        <div id="modal-body"></div>
+        <div style="text-align:right; font-weight:900; font-size:1.6rem; margin-top: 24px; color: var(--mint);" id="modal-footer-total">合計 0 点</div>
+        <div class="modal-footer">
+            <button class="btn-modal-close" onclick="closeTicketModal()">閉じる</button>
+        </div>
+    </div>
+
+    <!-- RESULT MODAL -->
+    <div id="result-modal" class="modal-base">
+        <div class="modal-title">的中報告</div>
+        <div class="input-label">結果を選択</div>
+        <div class="result-options">
+            <button id="opt-hit" class="btn-result-opt" onclick="setResultStatus('hit')">的中</button>
+            <button id="opt-miss" class="btn-result-opt" onclick="setResultStatus('miss')">不的中</button>
+        </div>
+        <div class="input-group">
+            <label class="input-label">投資金額 (円)</label>
+            <input type="number" id="input-bet" class="input-modern" placeholder="0" oninput="saveResultWork()">
+        </div>
+        <div class="input-group">
+            <label class="input-label">回収金額 (円)</label>
+            <input type="number" id="input-return" class="input-modern" placeholder="0" oninput="saveResultWork()">
+        </div>
+        <div class="modal-footer">
+            <button class="btn-modal-close" onclick="closeResultModal()">完了</button>
+        </div>
+    </div>
+
+</div>
+
+<script>
+    let db = { memos: [] };
+    let cur = null;
+    let tempNum = null;
+    let currentPhase = 'eval';
+    let betWork = { method: 'フォーメーション', sel: [[], [], []] };
+    let resultWork = { id: null, status: null };
+
+    const VENUES = {
+        chuo: ['東京','中山','京都','阪神','中京','札幌','函館','福島','新潟','小倉'],
+        chiho: ['大井','船橋','川崎','浦和','門別','盛岡','水沢','金沢','笠松','名古屋','園田','姫路','高知','佐賀']
+    };
+    const WEIGHTS = { '◎':6, '◯':5, '▲':4, '△':3, '★':2, '✕':1, '除':0 };
+
+    function getMarkIcon(mark) {
+        const strokeWidth = 3;
+        const red = "var(--mark-red)";
+        const dark = "var(--mark-dark)"; 
+        const gray = "var(--mark-gray)";
+        let color = (mark === '◎' || mark === '◯') ? red : (mark === '除' ? gray : dark);
+        const svg = (content) => `<svg class="icon-svg" viewBox="0 0 24 24" style="stroke:${color};" xmlns="http://www.w3.org/2000/svg">${content}</svg>`;
+        switch(mark) {
+            case '◎': return svg(`<circle cx="12" cy="12" r="10" stroke-width="${strokeWidth}"/><circle cx="12" cy="12" r="5" stroke-width="${strokeWidth}"/>`);
+            case '◯': return svg(`<circle cx="12" cy="12" r="10" stroke-width="${strokeWidth}"/>`);
+            case '▲': return svg(`<path d="M12 2L22 21H2L12 2Z" style="fill:${color}; stroke:none;"/>`);
+            case '△': return svg(`<path d="M12 4L21 20H3L12 4Z" stroke-width="2.5" stroke-dasharray="2 1"/>`);
+            case '★': return svg(`<path d="M12 2L15 9H22L16 14L18 21L12 17L6 21L8 14L2 9H9L12 2Z" stroke-width="2.5"/>`);
+            case '✕': return svg(`<path d="M18 6L6 18M6 6L18 18" stroke-width="${strokeWidth + 0.5}"/>`);
+            case '除': return svg(`<circle cx="12" cy="12" r="10" stroke-width="2.5"/><path d="M4.93 4.93L19.07 19.07" stroke-width="2.5"/>`);
+            default: return "";
+        }
+    }
+
+    const TICKET_ICON_SVG = `<svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M14.5 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7.5L14.5 2z"/><polyline points="14 2 14 8 20 8"/></svg>`;
+    
+    function getResultIcon(memo) {
+        const status = (memo.resultStatus === 'hit' && Number(memo.returnAmount) < Number(memo.betAmount)) ? 'miss' : memo.resultStatus;
+        if(status === 'hit') return `<span class="result-mark" style="color:var(--accent)">勝</span>`;
+        if(status === 'miss') return `<span class="result-mark" style="color:var(--slate-500)">負</span>`;
+        return `<span class="result-mark" style="color:var(--slate-400)">￥</span>`;
+    }
+
+    window.onload = () => {
+        const saved = localStorage.getItem('uma_pro_v23_nav_fix');
+        if (saved) db = JSON.parse(saved);
+        ['◎','◯','▲','△','★','✕','除'].forEach(m => {
+            const el = document.getElementById(`sel-${m}`);
+            if(el) el.innerHTML = getMarkIcon(m);
+        });
+        const titles = [document.getElementById('app-title-main'), document.getElementById('app-title-edit')];
+        titles.forEach(t => { t.addEventListener('click', (e) => { if (e.detail === 3) downloadApp(); }); });
+        refreshList();
+    };
+
+    function save() { localStorage.setItem('uma_pro_v23_nav_fix', JSON.stringify(db)); }
+
+    function downloadApp() {
+        const html = document.documentElement.outerHTML;
+        const blob = new Blob([html], { type: 'text/html' });
+        const url = URL.createObjectURL(blob);
+        const a = document.createElement('a');
+        a.href = url; a.download = `UmaMemo_Backup_${new Date().toISOString().slice(0,10)}.html`;
+        document.body.appendChild(a); a.click(); document.body.removeChild(a);
+        URL.revokeObjectURL(url); showToast("HTMLをダウンロードしました");
+    }
+
+    function showToast(msg) {
+        const t = document.getElementById('toast');
+        t.textContent = msg; t.style.display = 'block';
+        setTimeout(() => t.style.display = 'none', 2000);
+    }
+
+    function refreshList() {
+        const container = document.getElementById('memo-container');
+        container.innerHTML = '';
+        renderSummary();
+        if (db.memos.length === 0) {
+            container.innerHTML = `<div class="empty-state"><div class="empty-state-icon">${TICKET_ICON_SVG}</div><div class="empty-state-text">登録されたレースがありません</div></div>`;
+            document.getElementById('delete-all-container').classList.add('hidden');
+            return;
+        }
+        document.getElementById('delete-all-container').classList.remove('hidden');
+        db.memos.sort((a,b)=>b.updatedAt - a.updatedAt).forEach(m => {
+            const total = m.bets.reduce((s,b)=>s+b.count, 0);
+            const card = document.createElement('div');
+            card.className = 'memo-card';
+            let pressTimer;
+            card.addEventListener('pointerdown', () => { pressTimer = setTimeout(() => { if (confirm(`${m.venue} ${m.race}R を削除しますか？`)) { db.memos = db.memos.filter(x => x.id !== m.id); save(); refreshList(); } }, 1000); });
+            card.addEventListener('pointerup', () => clearTimeout(pressTimer));
+            card.addEventListener('pointerleave', () => clearTimeout(pressTimer));
+            card.onclick = (e) => { if (e.target.closest('.memo-action-btn')) return; openMemo(m); };
+            let resultClass = 'unset';
+            const effectiveStatus = (m.resultStatus === 'hit' && Number(m.returnAmount) < Number(m.betAmount)) ? 'miss' : m.resultStatus;
+            if(effectiveStatus === 'hit') resultClass = 'hit';
+            else if(effectiveStatus === 'miss') resultClass = 'miss';
+            card.innerHTML = `<div class="memo-body"><div class="memo-title">${m.venue} ${m.race}R</div><div class="memo-meta"><span class="tag tag-accent">${total} 点</span><span class="tag">${m.horses.length} 頭評価</span></div></div><div class="action-group"><button class="memo-action-btn result-btn ${resultClass}" onclick="openResultModal(${m.id})">${getResultIcon(m)}</button><button class="memo-action-btn" onclick="openQuickTicket(${m.id})">${TICKET_ICON_SVG}</button></div>`;
+            container.appendChild(card);
+        });
+    }
+
+    function renderSummary() {
+        let win = 0, loss = 0, balance = 0;
+        db.memos.forEach(m => {
+            if(m.resultStatus === 'hit') {
+                if (Number(m.returnAmount) < Number(m.betAmount)) loss++;
+                else win++;
+            } else if(m.resultStatus === 'miss') { loss++; }
+            balance += (parseInt(m.returnAmount) || 0) - (parseInt(m.betAmount) || 0);
+        });
+        const bar = document.getElementById('top-summary-bar');
+        bar.children[0].textContent = `${win}勝 ${loss}敗`;
+        const balEl = bar.children[1].querySelector('span');
+        balEl.textContent = `${balance >= 0 ? '+' : ''}${balance.toLocaleString()}円`;
+        balEl.className = balance >= 0 ? 'profit-plus' : 'profit-minus';
+    }
+
+    function createNewMemo() {
+        const m = { id: Date.now(), type: 'chuo', venue: '東京', race: 1, limit: 18, horses: [], bets: [], updatedAt: Date.now(), resultStatus: null, betAmount: 0, returnAmount: 0 };
+        db.memos.push(m); openMemo(m);
+    }
+
+    function openMemo(m) { cur = m; setPhase('eval'); document.getElementById('view-list').classList.add('hidden'); document.getElementById('view-edit').classList.remove('hidden'); initPad(); renderRaceOptions(); updateUI(); }
+
+    function exitEdit() {
+        if (currentPhase === 'bet' && betWork.sel.some(s => s.length > 0)) {
+            if (!confirm('買い目の入力（番号選択）中ですが、一覧に戻りますか？')) return;
+        }
+        if(cur) cur.updatedAt = Date.now(); save();
+        document.getElementById('view-edit').classList.add('hidden');
+        document.getElementById('view-list').classList.remove('hidden');
+        refreshList();
+    }
+
+    function setPhase(p) {
+        currentPhase = p;
+        document.getElementById('tab-eval').className = `tab-item ${p==='eval'?'active':''}`;
+        document.getElementById('tab-bet').className = `tab-item ${p==='bet'?'active':''}`;
+        document.getElementById('phase-eval').className = p==='eval'?'':'hidden';
+        document.getElementById('phase-bet').className = p==='bet'?'':'hidden';
+
+        // NEW: Disable config selects in bet mode
+        const selects = ['select-type', 'select-venue', 'select-race'];
+        selects.forEach(id => {
+            const el = document.getElementById(id);
+            if(el) el.disabled = (p === 'bet');
+        });
+
+        const fBtn = document.getElementById('footer-main-btn');
+        if(p==='eval'){ fBtn.classList.remove('mint'); fBtn.innerHTML = `<span>買い目作成 ➔</span>`; fBtn.onclick = () => setPhase('bet'); }
+        else { fBtn.classList.add('mint'); fBtn.innerHTML = `${TICKET_ICON_SVG}<span>券売機表示</span>`; fBtn.onclick = () => openTicketModal(cur); renderBetForm(); }
+    }
+
+    function initPad() {
+        const pad = document.getElementById('eval-pad'); pad.innerHTML = '';
+        for(let i=1; i<=18; i++) {
+            const b = document.createElement('button'); b.className = 'btn-horse'; b.id = `h-${i}`;
+            b.innerHTML = `<span>${i}</span><div class="badge" id="badge-${i}"></div>`;
+            b.onclick = () => { tempNum = i; updateUI(); }; pad.appendChild(b);
+        }
+    }
+
+    function renderRaceOptions() {
+        const s = document.getElementById('select-race'); s.innerHTML = '';
+        for(let i=1; i<=12; i++){ const o = document.createElement('option'); o.value = i; o.textContent = i + 'R'; s.appendChild(o); }
+    }
+
+    function updateUI() {
+        if(!cur) return;
+        document.getElementById('select-type').value = cur.type;
+        const vsel = document.getElementById('select-venue'); vsel.innerHTML = '';
+        VENUES[cur.type].forEach(v => { const o = document.createElement('option'); o.value = v; o.textContent = v; vsel.appendChild(o); });
+        vsel.value = cur.venue || VENUES[cur.type][0];
+        document.getElementById('select-race').value = cur.race;
+        document.getElementById('limit-display').textContent = cur.limit;
+        for(let i=1; i<=18; i++) {
+            const b = document.getElementById(`h-${i}`); const badge = document.getElementById(`badge-${i}`);
+            if (i > cur.limit) { b.style.display = 'none'; } else {
+                b.style.display = 'flex'; b.classList.remove('selected', 'excluded'); badge.innerHTML = ''; badge.style.display = 'none';
+                const h = cur.horses.find(x => x.num === i);
+                if(h) { badge.innerHTML = getMarkIcon(h.mark); badge.style.display = 'flex'; if(h.mark === '除') b.classList.add('excluded'); }
+            }
+        }
+        if(tempNum && tempNum <= cur.limit) document.getElementById(`h-${tempNum}`).classList.add('selected');
+        const currentHorse = cur.horses.find(x => x.num === tempNum);
+        document.querySelectorAll('#eval-mark-row .btn-m').forEach(btn => { btn.classList.remove('active'); if(currentHorse && btn.dataset.mark === currentHorse.mark) btn.classList.add('active'); });
+        renderEvalList(); renderBets(); save();
+    }
+
+    function adjustLimit(v) { cur.limit = Math.max(1, Math.min(18, cur.limit + v)); updateUI(); }
+    function promptLimit() { const val = prompt("頭数を入力してください (1-18)", cur.limit); const n = parseInt(val); if(!isNaN(n) && n >= 1 && n <= 18) { cur.limit = n; updateUI(); } }
+    function onTypeChange(v) { cur.type = v; cur.venue = VENUES[v][0]; updateUI(); }
+    function onVenueChange(v) { cur.venue = v; updateUI(); }
+    function onRaceChange(v) { cur.race = parseInt(v); updateUI(); }
+
+    function applyMark(m) {
+        if(!tempNum) return;
+        const existing = cur.horses.find(x => x.num === tempNum);
+        if(existing && existing.mark === m) { cur.horses = cur.horses.filter(x => x.num !== tempNum); }
+        else { cur.horses = cur.horses.filter(x => x.num !== tempNum); cur.horses.push({ num: tempNum, mark: m }); }
+        updateUI();
+    }
+
+    function resetEvaluation() { if(confirm('評価を全てリセットしますか？')){ cur.horses = []; tempNum = null; updateUI(); } }
+
+    function renderEvalList() {
+        const l = document.getElementById('eval-list'); l.innerHTML = '';
+        cur.horses.sort((a,b) => WEIGHTS[b.mark] - WEIGHTS[a.mark]).forEach(h => {
+            if (h.num > cur.limit) return;
+            const d = document.createElement('div'); d.className = `list-row ${h.mark==='除'?'excluded':''}`;
+            d.onclick = () => { tempNum = h.num; updateUI(); };
+            d.innerHTML = `<div class="row-mark-icon">${getMarkIcon(h.mark)}</div><div class="row-num">${h.num}</div><button class="btn-delete-text" onclick="event.stopPropagation(); removeHorse(${h.num})">削除</button>`;
+            l.appendChild(d);
+        });
+    }
+    function removeHorse(n) { cur.horses = cur.horses.filter(x => x.num !== n); updateUI(); }
+
+    function renderBetForm() {
+        const type = document.getElementById('bet-type').value;
+        const mbox = document.getElementById('method-container'); mbox.innerHTML = '';
+        let ms = ['フォーメーション', 'ボックス', '1頭軸流し'];
+        if(['三連複','三連単'].includes(type)) ms.push('2頭軸流し');
+        if(['単勝','複勝'].includes(type)) ms = ['通常'];
+        if(!ms.includes(betWork.method)) betWork.method = ms[0];
+        ms.forEach(m => { 
+            const b = document.createElement('button'); 
+            // Fix: Show active state for methods
+            b.className = `btn-ghost ${betWork.method===m?'active':''}`; 
+            b.style.flexShrink='0'; b.textContent = m; 
+            b.onclick = () => { 
+                betWork.method = m; 
+                renderBetForm(); // Re-render to refresh current tag highlight
+            }; 
+            mbox.appendChild(b); 
+        });
+        renderSelection();
+    }
+
+    function renderSelection() {
+        const type = document.getElementById('bet-type').value;
+        const sbox = document.getElementById('selection-container'); sbox.innerHTML = '';
+        // Note: betWork.sel is reset by clicking 'addBet', but not when just switching methods
+        let rows = (betWork.method==='フォーメーション') ? (['三連複','三連単'].includes(type)?3:2) : (betWork.method.includes('軸流し')?2:1);
+        const labels = betWork.method.includes('軸')?['軸馬','相手']:['1列目','2列目','3列目'];
+        for(let r=0; r<rows; r++){
+            const d = document.createElement('div'); d.innerHTML = `<div style="font-size:0.6rem; font-weight:900; margin: 4px 0 4px; color:var(--slate-500);">${rows>1?labels[r]:'選択'}</div>`;
+            const g = document.createElement('div'); g.className = 'grid-compact';
+            for(let i=1; i<=cur.limit; i++){
+                const b = document.createElement('button'); const h = cur.horses.find(x=>x.num===i);
+                b.className = 'btn-bet-horse'; if(h && h.mark==='除') b.disabled = true;
+                b.innerHTML = `<span>${i}</span><div style="position:absolute; top:1px; right:1px; width:10px; height:10px;">${h ? getMarkIcon(h.mark) : ''}</div>`;
+                b.onclick = () => toggleBetSel(r, i); b.dataset.r = r; b.dataset.n = i; g.appendChild(b);
+            }
+            d.appendChild(g); sbox.appendChild(d);
+        }
+        updateBetPreview();
+    }
+
+    function toggleBetSel(r, n) {
+        const idx = betWork.sel[r].indexOf(n); if(idx>-1) betWork.sel[r].splice(idx,1); else betWork.sel[r].push(n);
+        document.querySelectorAll('#selection-container .btn-bet-horse').forEach(b => {
+            const row = parseInt(b.dataset.r), num = parseInt(b.dataset.n);
+            if(betWork.sel[row].includes(num)){ b.classList.add('selected'); b.style.background = 'var(--accent-light)'; } 
+            else { b.classList.remove('selected'); b.style.background = 'var(--white)'; }
+        });
+        updateBetPreview();
+    }
+
+    function updateBetPreview() { const t = document.getElementById('bet-type').value; const c = calc(t, betWork.method, betWork.sel); document.getElementById('preview-count').textContent = c + ' 点'; }
+    function calc(t, m, s) {
+        const s1=s[0], s2=s[1], s3=s[2];
+        if(m==='通常'||m==='ボックス'){ const n = s1.length; if(t==='単勝'||t==='複勝') return n; if(t==='馬連'||t==='ワイド') return nCr(n,2); if(t==='馬単') return nPr(n,2); if(t==='三連複') return nCr(n,3); if(t==='三連単') return nPr(n,3); }
+        if(m==='1頭軸流し'){ if(s1.length !== 1) return 0; const n = s2.filter(x=>!s1.includes(x)).length; if(['馬連','馬単','ワイド'].includes(t)) return n; if(t==='三連複') return nCr(n,2); if(t==='三連単') return nPr(n,2); }
+        if(m==='2頭軸流し'){ if(s1.length !== 2) return 0; const n = s2.filter(x=>!s1.includes(x)).length; return n; }
+        if(m==='フォーメーション'){
+            let count = 0; if(['三連複','三連単'].includes(t)){ let temp = new Set(); for(let a of s1) for(let b of s2) for(let c of s3){ if(a!==b && b!==c && a!==c){ if(t==='三連複'){ const k=[a,b,c].sort((x,y)=>x-y).join(','); if(!temp.has(k)){temp.add(k); count++;}} else count++; } } }
+            else { let temp = new Set(); for(let a of s1) for(let b of s2){ if(a !== b){ if(['馬連','ワイド'].includes(t)){ const k=[a,b].sort((x,y)=>x-y).join(','); if(!temp.has(k)){temp.add(k); count++;}} else count++; } } } return count;
+        }
+        return 0;
+    }
+    function nCr(n, r){ if(n<r) return 0; let res=1; for(let i=1;i<=r;i++) res=res*(n-i+1)/i; return Math.floor(res); }
+    function nPr(n, r){ if(n<r) return 0; let res=1; for(let i=0;i<r;i++) res*=(n-i); return res; }
+
+    function addBet() {
+        const t = document.getElementById('bet-type').value; const s = betWork.sel;
+        let valid = true, errMsg = "";
+        if(betWork.method === 'フォーメーション') { if(['三連複','三連単'].includes(t)) { if(s[0].length === 0 || s[1].length === 0 || s[2].length === 0) { valid = false; errMsg = "1〜3列目すべて選択してください"; } } else { if(s[0].length === 0 || s[1].length === 0) { valid = false; errMsg = "1〜2列目すべて選択してください"; } } }
+        else if(betWork.method.includes('軸流し')) { const rk = betWork.method === '2頭軸流し' ? 2 : 1; if(s[0].length !== rk) { valid = false; errMsg = `軸馬を${rk}頭選択してください`; } else if(s[1].length === 0) { valid = false; errMsg = "相手を選択してください"; } }
+        else { if(s[0].length === 0) { valid = false; errMsg = "馬番号を選択してください"; } }
+        const c = calc(t, betWork.method, s);
+        if(!valid || c === 0) { showToast(errMsg || "買い目が成立していません"); return; }
+        cur.bets.push({ id:Date.now(), type:t, method:betWork.method, selection:JSON.parse(JSON.stringify(betWork.sel)), count:c });
+        betWork.sel = [[], [], []]; renderSelection(); updateUI(); showToast('追加しました');
+    }
+
+    function renderBets() {
+        const l = document.getElementById('bet-list-container'); l.innerHTML = ''; let total = 0;
+        cur.bets.forEach(b => { total += b.count; const d = document.createElement('div'); d.className = 'bet-card'; const ns = b.selection.filter(x=>x.length>0).map(x=>x.sort((p,q)=>p-q).join(',')).join(' / ');
+            d.innerHTML = `<div class="bet-head"><div class="bet-head-info"><span>${b.type}</span><span class="tag">${b.method}</span></div><button class="btn-delete-text" style="color:var(--slate-400); margin: 0; padding: 0;" onclick="removeBet(${b.id})">削除</button></div><div class="bet-body">${ns}</div><div style="text-align:right; font-size:0.8rem; font-weight:800; margin-top:8px; color:var(--accent);">${b.count} 点</div>`;
+            l.appendChild(d);
+        });
+        document.getElementById('total-count-display').textContent = total + ' 点';
+    }
+    function removeBet(id) { cur.bets = cur.bets.filter(b=>b.id !== id); updateUI(); }
+    function deleteMemo() { if(confirm('メモを削除しますか？')){ db.memos = db.memos.filter(x=>x.id !== cur.id); save(); exitEdit(); } }
+    function deleteAllMemos() { if(confirm('すべてのデータを消去しますか？')){ db.memos = []; save(); refreshList(); } }
+
+    /* --- Modals --- */
+    function openQuickTicket(id) { const m = db.memos.find(x => x.id === id); if(m) openTicketModal(m); }
+    function openTicketModal(m) {
+        const v = document.getElementById('ticket-modal'); const b = document.getElementById('modal-body'); const legendArea = document.getElementById('modal-legend-area');
+        document.getElementById('modal-header-title').textContent = `${m.venue} ${m.race}R`;
+        document.getElementById('modal-footer-total').textContent = `合計 ${m.bets.reduce((s,x)=>s+x.count,0)} 点`;
+        legendArea.innerHTML = '';
+        const evaluatedHorses = [...m.horses].sort((a,b) => a.num - b.num);
+        if(evaluatedHorses.length > 0) { evaluatedHorses.forEach(h => { const item = document.createElement('div'); item.className = 'legend-item'; item.innerHTML = `<span>${h.num}</span><span class="legend-icon">${getMarkIcon(h.mark)}</span>`; legendArea.appendChild(item); }); legendArea.style.display = 'flex'; } else { legendArea.style.display = 'none'; }
+        b.innerHTML = '';
+        m.bets.forEach(x => {
+            const group = document.createElement('div'); group.className = 'modal-bet-group';
+            const ns = x.selection.filter(p=>p.length>0).map(p=>p.sort((m,n)=>m-n).join(', ')).join(' ／ ');
+            group.innerHTML = `<div class="modal-bet-type">${x.type} (${x.method}) — ${x.count}点</div><div class="modal-bet-nums">${ns}</div>`;
+            b.appendChild(group);
+        });
+        v.style.display = 'block'; document.body.style.overflow = 'hidden';
+    }
+    function closeTicketModal() { document.getElementById('ticket-modal').style.display = 'none'; document.body.style.overflow = ''; }
+
+    function openResultModal(id) { const m = db.memos.find(x => x.id === id); if(!m) return; resultWork.id = id; resultWork.status = m.resultStatus; document.getElementById('input-bet').value = m.betAmount || 0; document.getElementById('input-return').value = m.returnAmount || 0; syncResultButtons(m.resultStatus); document.getElementById('result-modal').style.display = 'block'; document.body.style.overflow = 'hidden'; }
+    function setResultStatus(status) { if(resultWork.status === status) { resultWork.status = null; document.getElementById('input-bet').value = 0; document.getElementById('input-return').value = 0; } else { resultWork.status = status; } syncResultButtons(resultWork.status); saveResultWork(); }
+    function syncResultButtons(status) { document.getElementById('opt-hit').className = `btn-result-opt ${status === 'hit' ? 'active-hit' : ''}`; document.getElementById('opt-miss').className = `btn-result-opt ${status === 'miss' ? 'active-miss' : ''}`; }
+    function saveResultWork() { const m = db.memos.find(x => x.id === resultWork.id); if(!m) return; m.resultStatus = resultWork.status; m.betAmount = document.getElementById('input-bet').value; m.returnAmount = document.getElementById('input-return').value; m.updatedAt = Date.now(); save(); }
+    function closeResultModal() { document.getElementById('result-modal').style.display = 'none'; document.body.style.overflow = ''; refreshList(); }
+</script>
+
+</body></html>
